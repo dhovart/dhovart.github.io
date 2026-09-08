@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
+    <title>Projets de Denis Hovart</title>
+    <meta name="description" content="Projets personnels de Denis Hovart : Synapse, cargo-local-registry, shaders, jeux et expériences.">
+    <link rel="stylesheet" href="/assets/style.css?v=1788866768" type="text/css" media="all" />
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#333333">
+    <meta name="msapplication-TileColor" content="#e72e45">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Projets de Denis Hovart">
+    <meta property="og:description" content="Projets personnels de Denis Hovart : Synapse, cargo-local-registry, shaders, jeux et expériences.">
+    <meta property="og:image" content="https://www.denishovart.com/assets/favicon/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="page-projects">
+    <header class="top">
+      <nav class="sections" aria-label="Sections">
+        <a href="/" >Accueil</a>
+        <a href="/resume/" >Parcours</a>
+        <a href="/projects/" aria-current="page">Projets</a>
+      </nav>
+      <nav class="languages" aria-label="Langues">
+        
+          
+            <a href="/projects/" hreflang="fr" aria-current="true">fr</a>
+          
+        
+          
+            <a href="/en/projects/" hreflang="en" >en</a>
+          
+        
+          
+            <a href="/pt/projects/" hreflang="pt" >pt</a>
+          
+        
+      </nav>
+    </header>
+    <main class="content">
+      <h1>Ce que je fabrique sans qu'on me le demande.</h1>
+
+<p class="lede">
+  Des logiciels utilisés tous les jours, ou d'autres simplement pour l'exercice. Le premier groupe, c'est ce sur quoi je travaille en ce moment. Le second, tout ce qu'on peut cliquer, jouer ou regarder.
+</p>
+
+<h2>En cours</h2>
+
+<ul class="projects">
+  <li>
+    <span class="name"><a href="https://dhovart.tngl.sh/synapse/" rel="noopener">Synapse</a> <span class="meta">2026, Svelte 5, NestJS, Tauri, Rust, Loro</span></span>
+    <p>Une application de révision pour préparer des examens. Logiciel libre sous AGPL.</p>
+    <p>J'écris un <a href="https://dhovart.tngl.sh/synapse-blog" rel="noopener">journal de bord</a> en parallèle, en anglais : pourquoi un CRDT au centre d'une application de révision, comment un design system est devenu plus petit et plus accessible en laissant des choses de côté, où l'IA a accéléré le travail et où elle l'a discrètement compliqué.</p>
+    <div class="links">
+      <a href="https://synapse-try.netlify.app/" rel="noopener">Essayer dans le navigateur</a>
+      <a href="https://releases.denzen.online/synapse/" rel="noopener">Applications desktop et mobile</a>
+      <a href="https://dhovart.tngl.sh/synapse-blog" rel="noopener">Journal de bord</a>
+      <a href="https://tangled.org/denishovart.com/synapse" rel="noopener">Code source</a>
+    </div>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/cargo-local-registry" rel="noopener">cargo-local-registry</a> <span class="meta">depuis 2021, Rust</span></span>
+    <p>Une sous-commande Cargo qui construit un registre local à partir d'un lockfile, pour compiler du Rust hors ligne ou sur des machines isolées. Créée par Alex Crichton en 2016, confiée à moi en 2021. Je la maintiens à travers les changements de l'API interne de Cargo, j'ai ajouté une commande <code>add</code> pour les crates individuelles et déplacé l'intégration continue et les binaires précompilés sur GitHub Actions. Plus de 300 000 téléchargements sur <a href="https://crates.io/crates/cargo-local-registry" rel="noopener">crates.io</a>.</p>
+  </li>
+</ul>
+
+<h2>Interactif et visuel</h2>
+
+<ul class="projects">
+  <li>
+    <span class="name"><a href="https://denishovart.com/octopus/" rel="noopener">Octopus</a> <span class="meta">2012, canvas, JavaScript</span></span>
+    <p>Une pieuvre faite de ressorts qui suit le curseur dans la page. Une expérience canvas d'avant l'époque où requestAnimationFrame était partout. <a href="https://github.com/dhovart/octopus" rel="noopener">Code source</a>.</p>
+    <video class="demo" src="/assets/video/octopus.mp4" poster="/assets/video/octopus.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://www.shadertoy.com/user/C_H" rel="noopener">Shaders</a> <span class="meta">depuis 2015, GLSL</span></span>
+    <p>Des fragment shaders sur Shadertoy, sous deux comptes : <a href="https://www.shadertoy.com/user/C_H" rel="noopener">C_H</a> et <a href="https://www.shadertoy.com/user/denzen" rel="noopener">denzen</a>. Ray marching, bruit, le genre de choses qu'on écrit pour voir ce qui se passe.</p>
+    <div class="shaders">
+      <a href="https://www.shadertoy.com/view/WlcSD7" rel="noopener"><video class="demo" src="/assets/video/shader-a.mp4" poster="/assets/video/shader-a.jpg" muted loop playsinline preload="none" controls></video></a>
+      <a href="https://www.shadertoy.com/view/4lB3DG" rel="noopener"><video class="demo" src="/assets/video/shader-b.mp4" poster="/assets/video/shader-b.jpg" muted loop playsinline preload="none" controls></video></a>
+      <a href="https://www.shadertoy.com/view/4tSGW3" rel="noopener"><video class="demo" src="/assets/video/shader-c.mp4" poster="/assets/video/shader-c.jpg" muted loop playsinline preload="none" controls></video></a>
+    </div>
+  </li>
+  <li>
+    <span class="name"><a href="https://denishovart.com/solitaire/" rel="noopener">Solitaire</a> <span class="meta">2016, React, Redux</span></span>
+    <p>Un petit solitaire Klondike écrit pour apprivoiser ES6, Redux et React. On fait glisser les cartes. <a href="https://github.com/dhovart/solitaire" rel="noopener">Code source</a>.</p>
+    <video class="demo" src="/assets/video/solitaire.mp4" poster="/assets/video/solitaire.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/rescript-game" rel="noopener">Prototype de jeu en ReScript</a> <span class="meta">2021, ReScript</span></span>
+    <p>Plus un moteur de jeu qu'un jeu : quadtrees, comportements de pilotage, détection de collisions, le tout écrit de manière immuable en ReScript. Abandonné, mais une bonne façon d'apprendre le langage.</p>
+    <video class="demo" src="/assets/video/rgame.mp4" poster="/assets/video/rgame.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/ultradino2000" rel="noopener">Ultradino 2000</a> <span class="meta">2022, Rust, Bevy, abandonné</span></span>
+    <p>Un remake d'Asteroids commencé pour une Ludum Dare, sur le thème « retarder l'inévitable ». Vous êtes un dinosaure en jetpack qui tire des lasers avec les yeux sur la comète qui va éteindre votre espèce. Fait avec un ami, abandonné avant l'écran de fin.</p>
+    <video class="demo" src="/assets/video/ultradino.mp4" poster="/assets/video/ultradino.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+</ul>
+
+
+    </main>
+    <footer class="foot">
+      <p>Denis Hovart, Berlin. <a href="/#contact" data-open="contact">Contact</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie_light.min.js" defer></script>
+    <script type="module" src="/assets/main.js?v=1788866768"></script>
+  </body>
+</html>

@@ -1,93 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <title>Denis Hovart</title>
-    <link rel="stylesheet" href="/assets/style.css" type="text/css" media="all" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Denis Hovart, programador & designer freelance">
+    
+    
+    
+    <title>Denis Hovart</title>
+    <meta name="description" content="Denis Hovart, desenvolvedor full-stack e designer em Berlim">
+    <link rel="stylesheet" href="/assets/style.css?v=1788866768" type="text/css" media="all" />
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00aba9">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#333333">
+    <meta name="msapplication-TileColor" content="#e72e45">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Denis Hovart">
+    <meta property="og:description" content="Denis Hovart, desenvolvedor full-stack e designer em Berlim">
+    <meta property="og:image" content="https://www.denishovart.com/assets/favicon/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
   </head>
-  <body>
+  <body class="page-home">
+    <header class="top">
+      <nav class="sections" aria-label="Seções">
+        <a href="/pt/" aria-current="page">Início</a>
+        <a href="/pt/resume/" >Currículo</a>
+        <a href="/pt/projects/" >Projetos</a>
+      </nav>
+      <nav class="languages" aria-label="Idiomas">
+        
+          
+            <a href="/" hreflang="fr" >fr</a>
+          
+        
+          
+            <a href="/en/" hreflang="en" >en</a>
+          
+        
+          
+            <a href="/pt/" hreflang="pt" aria-current="true">pt</a>
+          
+        
+      </nav>
+    </header>
     <main class="content">
-        <nav class="languages">
-          
-            
-              <a href="/" >fr</a>
-            
-          
-            
-              <a href="/en/" >en</a>
-            
-          
-            
-              <a href="/pt/" class="active">pt</a>
-            
-          
-        </nav>
-      <div id="logo"></div>
+      <div id="logo" role="img" aria-label="Denis Hovart"></div>
 
-<p>
-  Olá, eu sou Denis, um <button data-modal="developer">programador full-stack</button> e <button data-modal="designer">designer</button> baseado em Berlim, com com um fraco por UX e design de interface.
-</p>
-
-<p>
-  Já trabalhei para clientes como o canal franco-alemão Arte, o Institut Français e o Canal+.
-</p>
-
-<p>
-  Não estou disponível para trabalho a longo prazo até o fim do ano mas fique à vontade para me <button data-modal="contact">contactar</button> para qualquer outra solicitação.
-</p>
-
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-developer-title" id="modal-developer">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Fechar</span>
-      </button>
-      <span class="modal__title" id="modal-developer-title">Habilidades full-stack</span>
-      <p>
-        <strong>Back:</strong> Spring Boot, Rails, Laravel, ElasticSearch, Solr, MySQL/MariaDB, PostgreSQL
-      </p>
-      <p>
-        <strong>Front:</strong> React, Typescript, PostCSS, Sass
-      </p>
-      <p>
-        <strong>Mobile:</strong> React Native
-      </p>
-    </div>
+<div class="intro">
+  <p>
+    Olá, eu sou o Denis, desenvolvedor full-stack e designer em Berlim, com um fraco por UX e design de interfaces.
+  </p>
+  <p>
+    Trabalho na <a href="https://ninox.com" rel="noopener">Ninox</a>, uma plataforma de banco de dados low-code, onde a maior parte do meu tempo vai para segurança, estabilidade das releases e infraestrutura de testes. Antes disso trabalhei para clientes variados, entre eles a Arte, o Institut Français, o Canal+ e a Jinko, uma plataforma de simulação de ensaios clínicos. Os detalhes estão no meu <a href="/pt/resume/">currículo</a>, e o que faço por fora nos meus <a href="/pt/projects/">projetos</a>.
+  </p>
+  <p>
+    Você pode <button class="pill" type="button" data-open="contact">me escrever</button> aqui.
+  </p>
 </div>
 
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-designer-title" id="modal-designer">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Fechar</span>
-      </button>
-      <span class="modal__title" id="modal-designer-title">Design</span>
-      <p>Visual identity, responsive web design, user testing, prototyping</p>
-    </div>
-</div>
-
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-contact-title" id="modal-contact">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Fechar</span>
-      </button>
-      <span class="modal__title" id="modal-contact-title">Contact</span>
-      <p><strong>E-mail</strong> <a href="mailto:hello@denishovart.com">hello@denishovart.com</a></p>
-      <p><strong>Celular</strong> +33 6 08 85 77 35</p>
-    </div>
-</div>
+<dialog class="contact" id="contact" aria-labelledby="contact-title">
+  <button class="close" type="button" aria-label="Fechar"></button>
+  <h2 id="contact-title">Contato</h2>
+  <form class="contact-form" method="post" action="https://contact.denzen.online/submit" data-sending="Enviando…" data-sent="Enviado. Obrigado, respondo em breve." data-error="Não enviado. Verifique os campos e tente de novo em um minuto.">
+    <p class="hint">Escreva para mim aqui. Leio tudo e respondo por e-mail.</p>
+    <label>Seu nome <input type="text" name="name" required maxlength="200" autocomplete="name"></label>
+    <label>Seu e-mail <input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+    <label>Sua mensagem <textarea name="message" required minlength="10" maxlength="5000" rows="5"></textarea></label>
+    <div class="nope" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <input type="hidden" name="ts" value=""><input type="hidden" name="lang" value="pt">
+    <div class="actions"><button type="submit">Enviar</button><output class="status" role="status" aria-live="polite"></output></div>
+    <p class="privacy">Usado só para responder a você. Guardado no meu próprio servidor, nunca compartilhado.</p>
+  </form>
+  <p class="elsewhere"><strong>Em outros lugares</strong> <a href="https://github.com/dhovart" rel="noopener">GitHub</a>, <a href="https://tangled.org/denishovart.com" rel="noopener">tangled</a>, <a href="https://www.linkedin.com/in/denishovart" rel="noopener">LinkedIn</a></p>
+</dialog>
 
 
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie_light.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
-    <script src="/assets/main.js"></script>
+    <footer class="foot">
+      <p>Denis Hovart, Berlim. <a href="/pt/#contact" data-open="contact">Contato</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie_light.min.js" defer></script>
+    <script type="module" src="/assets/main.js?v=1788866768"></script>
+  </body>
 </html>
