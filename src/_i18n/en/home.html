@@ -1,51 +1,27 @@
-<p>
-  Hello, I am Denis, a freelance <button data-modal="developer">full-stack developer</button> and <button data-modal="designer">designer</button> based in Berlin, with a soft spot for UX and interface design.
-</p>
-
-<p>
-  I have worked for organizations such as Arte, the Institut Français or Canal+.
-</p>
-
-<p>
-  I am currently not available for long-term work until the end of the year but feel free to <button data-modal="contact">reach me</button> for any other inquiry.
-</p>
-
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-developer-title" id="modal-developer">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Close</span>
-      </button>
-      <span class="modal__title" id="modal-developer-title">Full-stack abilities</span>
-      <p>
-        <strong>Back:</strong> Spring Boot, Rails, Laravel, ElasticSearch, Solr, MySQL/MariaDB, PostgreSQL
-      </p>
-      <p>
-        <strong>Front:</strong> React, Typescript, PostCSS, Sass
-      </p>
-      <p>
-        <strong>Mobile:</strong> React Native
-      </p>
-    </div>
+<div class="intro">
+  <p>
+    Hello, I am Denis, a full-stack developer and designer based in Berlin, with a soft spot for UX and interface design.
+  </p>
+  <p>
+    I work at <a href="https://ninox.com" rel="noopener">Ninox</a>, a low-code database platform, where most of my time goes into security, release stability and test infrastructure. Before that I worked for a range of clients, among them Arte, the Institut Français, Canal+ and the clinical trial simulation platform Jinko. The <a href="{% tl resume %}">résumé</a> has the details, and the <a href="{% tl projects %}">projects</a> page what I build on the side.
+  </p>
+  <p>
+    You can <button class="pill" type="button" data-open="contact">write to me</button> here.
+  </p>
 </div>
 
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-designer-title" id="modal-designer">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Close</span>
-      </button>
-      <span class="modal__title" id="modal-designer-title">Design</span>
-      <p>Visual identity, responsive web design, user testing, prototyping</p>
-    </div>
-</div>
-
-<div class="modal" role="dialog" hidden tabindex="-1" aria-labelledby="modal-contact-title" id="modal-contact">
-  <div class="modal__content">
-      <button class="modal__close" type="button">
-          <span class="visually-hidden">Close</span>
-      </button>
-      <span class="modal__title" id="modal-contact-title">Contact</span>
-      <p><strong>E-mail</strong> <a href="mailto:hello@denishovart.com">hello@denishovart.com</a></p>
-      <p><strong>Phone</strong> +33 6 08 85 77 35</p>
-    </div>
-</div>
-
+<dialog class="contact" id="contact" aria-labelledby="contact-title">
+  <button class="close" type="button" aria-label="Close"></button>
+  <h2 id="contact-title">Contact</h2>
+  <form class="contact-form" method="post" action="https://contact.denzen.online/submit" data-sending="Sending…" data-sent="Sent. Thank you, I will get back to you soon." data-error="Not sent. Check the fields and try again in a minute.">
+    <p class="hint">Write to me here. I read everything and answer by e-mail.</p>
+    <label>Your name <input type="text" name="name" required maxlength="200" autocomplete="name"></label>
+    <label>Your e-mail <input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+    <label>Your message <textarea name="message" required minlength="10" maxlength="5000" rows="5"></textarea></label>
+    <div class="nope" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <input type="hidden" name="ts" value=""><input type="hidden" name="lang" value="en">
+    <div class="actions"><button type="submit">Send</button><output class="status" role="status" aria-live="polite"></output></div>
+    <p class="privacy">Used only to answer you. Stored on my own server, never shared.</p>
+  </form>
+  <p class="elsewhere"><strong>Elsewhere</strong> <a href="https://github.com/dhovart" rel="noopener">GitHub</a>, <a href="https://tangled.org/denishovart.com" rel="noopener">tangled</a>, <a href="https://www.linkedin.com/in/denis-hovart-a37907142/" rel="noopener">LinkedIn</a></p>
+</dialog>

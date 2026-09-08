@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
   <head>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/style.css" type="text/css" media="all" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.translations[site.lang].description }}{% endif %}">
+    {% if page.namespace %}{% assign pagemeta = site.translations[site.lang].pages[page.namespace] %}{% endif %}
+    {% assign pagetitle = pagemeta.title | default: page.title %}
+    {% assign pagedesc = pagemeta.description | default: site.translations[site.lang].description %}
+    <title>{{ pagetitle }}</title>
+    <meta name="description" content="{{ pagedesc }}">
+    <link rel="stylesheet" href="/assets/style.css?v={{ site.time | date: '%s' }}" type="text/css" media="all" />
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/fira-sans-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00aba9">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#333333">
+    <meta name="msapplication-TileColor" content="#e72e45">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="{{ pagetitle }}">
+    <meta property="og:description" content="{{ pagedesc }}">
+    <meta property="og:image" content="https://www.denishovart.com/assets/favicon/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
   </head>
-  <body>
+  <body class="page-{{ page.namespace | default: 'home' }}">
+    <header class="top">
+      <nav class="sections" aria-label="{{ site.translations[site.lang].nav.label }}">
+        <a href="{{ site.baseurl_root }}/{% if site.lang != 'fr' %}{{ site.lang }}/{% endif %}" {% if page.namespace == nil %}aria-current="page"{% endif %}>{{ site.translations[site.lang].nav.home }}</a>
+        <a href="{% tl resume %}" {% if page.namespace == 'resume' %}aria-current="page"{% endif %}>{{ site.translations[site.lang].nav.resume }}</a>
+        <a href="{% tl projects %}" {% if page.namespace == 'projects' %}aria-current="page"{% endif %}>{{ site.translations[site.lang].nav.projects }}</a>
+      </nav>
+      <nav class="languages" aria-label="{{ site.translations[site.lang].nav.languages }}">
+        {% for lang in site.languages %}
+          {% if page.namespace %}
+            <a href="{% tl {{ page.namespace }} {{ lang }} %}" hreflang="{{ lang }}" {% if site.lang == lang %}aria-current="true"{% endif %}>{{ lang }}</a>
+          {% else %}
+            <a href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}/{% endif %}" hreflang="{{ lang }}" {% if site.lang == lang %}aria-current="true"{% endif %}>{{ lang }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </header>
     <main class="content">
-        <nav class="languages">
-          {% for lang in site.languages %}
-            {% if page.namespace %}
-              <a href="{% tl {{ page.namespace }} {{ lang }} %}" {% if site.lang == lang %}class="active"{% endif %}>{{ lang }}</a>
-            {% else %}
-              <a href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}/{% endif %}" {% if site.lang == lang %}class="active"{% endif %}>{{ lang }}</a>
-            {% endif %}
-          {% endfor %}
-        </nav>
       {{ content }}
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie_light.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
-    <script src="/assets/main.js"></script>
+    <footer class="foot">
+      <p>{{ site.translations[site.lang].footer.text }} <a href="{{ site.baseurl_root }}/{% if site.lang != 'fr' %}{{ site.lang }}/{% endif %}#contact" data-open="contact">{{ site.translations[site.lang].footer.contact }}</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.13.0/lottie_light.min.js" defer></script>
+    <script type="module" src="/assets/main.js?v={{ site.time | date: '%s' }}"></script>
+  </body>
 </html>

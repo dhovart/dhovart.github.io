@@ -1,1 +1,17 @@
-description: Denis Hovart, freelance developer & designer
+description: Denis Hovart, full-stack developer and designer in Berlin
+nav:
+  label: Sections
+  home: Home
+  resume: Résumé
+  languages: Languages
+  projects: Projects
+footer:
+  text: Denis Hovart, Berlin.
+  contact: Contact
+pages:
+  resume:
+    title: "Denis Hovart's résumé"
+    description: "Eighteen years of web development: Ninox, Novadiscovery, Arte, AREA 17, and the open source work in between."
+  projects:
+    title: "Denis Hovart's projects"
+    description: "Side projects by Denis Hovart: Synapse, cargo-local-registry, shaders, games and experiments."

@@ -1,4 +1,7 @@
-.DS_Store
-.jekyll-cache
 _site
-
+vendor
+.bundle-home
+.gems
+.bundle
+.jekyll-cache
+.DS_Store

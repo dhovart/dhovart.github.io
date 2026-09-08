@@ -1,0 +1,59 @@
+<h1>Things I make when nobody asked.</h1>
+
+<p class="lede">
+  Software used every day, or made just for fun. The first group is what I am working on now. The second is everything you can click, play or watch.
+</p>
+
+<h2>Building now</h2>
+
+<ul class="projects">
+  <li>
+    <span class="name"><a href="https://dhovart.tngl.sh/synapse/" rel="noopener">Synapse</a> <span class="meta">2026, Svelte 5, NestJS, Tauri, Rust, Loro</span></span>
+    <p>A study app for exam revision. Free software under the AGPL.</p>
+    <p>I write a <a href="https://dhovart.tngl.sh/synapse-blog" rel="noopener">devlog</a> alongside it: why a CRDT sits at the centre of a study app, how a design system got smaller and more accessible by leaving things out, where AI sped the work up and where it quietly made it harder.</p>
+    <div class="links">
+      <a href="https://synapse-try.netlify.app/" rel="noopener">Try it in the browser</a>
+      <a href="https://releases.denzen.online/synapse/" rel="noopener">Desktop and mobile apps</a>
+      <a href="https://dhovart.tngl.sh/synapse-blog" rel="noopener">Devlog</a>
+      <a href="https://tangled.org/denishovart.com/synapse" rel="noopener">Source</a>
+    </div>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/cargo-local-registry" rel="noopener">cargo-local-registry</a> <span class="meta">since 2021, Rust</span></span>
+    <p>A Cargo subcommand that builds a local registry from a lockfile, for building Rust projects on machines without internet access. Started by Alex Crichton in 2016, handed to me in 2021. I keep it working through Cargo's internal API changes, added an <code>add</code> command for single crates, and moved CI and prebuilt binaries to GitHub Actions. Over 300,000 downloads on <a href="https://crates.io/crates/cargo-local-registry" rel="noopener">crates.io</a>.</p>
+  </li>
+</ul>
+
+<h2>Interactive and visual</h2>
+
+<ul class="projects">
+  <li>
+    <span class="name"><a href="https://denishovart.com/octopus/" rel="noopener">Octopus</a> <span class="meta">2012, canvas, JavaScript</span></span>
+    <p>A sea creature swimming on its own across a canvas, tentacles trailing behind. An experiment from 2012, before requestAnimationFrame was everywhere. <a href="https://github.com/dhovart/octopus" rel="noopener">Source</a>.</p>
+    <video class="demo" src="/assets/video/octopus.mp4" poster="/assets/video/octopus.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://www.shadertoy.com/user/C_H" rel="noopener">Shaders</a> <span class="meta">since 2015, GLSL</span></span>
+    <p>Fragment shaders on <a href="https://www.shadertoy.com/user/C_H" rel="noopener">Shadertoy</a>, the kind of thing you write to see what happens.</p>
+    <div class="shaders">
+      <a href="https://www.shadertoy.com/view/WlcSD7" rel="noopener"><video class="demo" src="/assets/video/shader-a.mp4" poster="/assets/video/shader-a.jpg" muted loop playsinline preload="none" controls></video></a>
+      <a href="https://www.shadertoy.com/view/4lB3DG" rel="noopener"><video class="demo" src="/assets/video/shader-b.mp4" poster="/assets/video/shader-b.jpg" muted loop playsinline preload="none" controls></video></a>
+      <a href="https://www.shadertoy.com/view/4tSGW3" rel="noopener"><video class="demo" src="/assets/video/shader-c.mp4" poster="/assets/video/shader-c.jpg" muted loop playsinline preload="none" controls></video></a>
+    </div>
+  </li>
+  <li>
+    <span class="name"><a href="https://denishovart.com/solitaire/" rel="noopener">Solitaire</a> <span class="meta">2016, React, Redux</span></span>
+    <p>A small Klondike solitaire written to get acquainted with ES6, Redux and React. <a href="https://github.com/dhovart/solitaire" rel="noopener">Source</a>.</p>
+    <video class="demo" src="/assets/video/solitaire.mp4" poster="/assets/video/solitaire.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/rescript-game" rel="noopener">ReScript game prototype</a> <span class="meta">2021, ReScript</span></span>
+    <p>More of a game engine than a game: quadtrees, steering behaviours, collision detection, all written immutably in ReScript. Abandoned, but a good way to learn the language.</p>
+    <video class="demo" src="/assets/video/rgame.mp4" poster="/assets/video/rgame.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+  <li>
+    <span class="name"><a href="https://github.com/dhovart/ultradino2000" rel="noopener">Ultradino 2000</a> <span class="meta">2022, Rust, Bevy, abandoned</span></span>
+    <p>An Asteroids remake started for a Ludum Dare jam, theme "delay the inevitable". You are a dinosaur in a jetpack shooting lasers from your eyes at the comet that ends your species. Made with a friend, never finished.</p>
+    <video class="demo" src="/assets/video/ultradino.mp4" poster="/assets/video/ultradino.jpg" muted loop playsinline preload="none" controls></video>
+  </li>
+</ul>
